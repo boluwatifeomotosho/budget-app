@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget App</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="budget-container">
+            <h3>Budget</h3>
+            <p class="hide error" id="budget-error">
+              Value cannot be empty or negative
+            </p>
+            <input
+              type="number"
+              id="budget-amount"
+              placeholder="please enter your budget"
+            />
+            <button class="submit" id="budget-button">Set Budget</button>
+          </div>
+
+          <!-- Expenditure -->
+          <div class="user-amount-container">
+            <h3>Expenses</h3>
+            <p class="hide error" id="expense-error">Values cannot be empty</p>
+            <input
+              type="text"
+              class="product-title"
+              id="expense-name"
+              placeholder="please enter expense"
+            />
+            <input
+              type="number"
+              id="expense-amount"
+              placeholder="please enter expense amount"
+            />
+            <button class="submit" id="expense-button">Add expense</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space">
+          <div>
+            <p>Total Budget</p>
+            <span id="amount">0</span>
+          </div>
+          <div>
+            <p>Expenses</p>
+            <span id="expense-value">0</span>
+          </div>
+          <div>
+            <p>Balance</p>
+            <span id="balance-amount">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list">
+        <h3>Expense List</h3>
+        <div class="list-container" id="list"></div>
+        <!-- <div class="sublist-content flex-space">
+          <p class="product">200</p>
+          <p class="amount">20</p>
+          <button
+            class="fa-solid fa-pen-to-square edit"
+            style="font-size: 1.2em"
+          ></button
+          ><button
+            class="fa-solid fa-trash-can delete"
+            style="font-size: 1.2em"
+          ></button>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Script -->
+  </body>
+  <script src="script.js"></script>
+</html>
