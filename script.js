@@ -19,7 +19,7 @@ const updateBal = function (bgt, exp) {
 // Add Budget
 setBgtBtn.addEventListener('click', function () {
   bgtVal = budgetAmt.value;
-  if (bgtVal === Number || bgtVal === '') {
+  if (!bgtVal === Number || bgtVal === '' || bgtVal < 0) {
     bgtErr.classList.remove('hide');
   } else {
     bgtErr.classList.add('hide');
